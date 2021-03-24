@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Lê Việt Thắng khoai to';
+  currentProgress = 20;
 }
