@@ -3,7 +3,7 @@
 <body>
 <!-- Will be black -->
 <div class="bg-white dark:bg-black">
-  <app-author-list></app-author-list>
+  <app-toggle-component (toggleColor)="toggleButton()" [toggleData]="toggleData"></app-toggle-component>
 </div>
 </body>
 </html>

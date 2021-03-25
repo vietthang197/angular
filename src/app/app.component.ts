@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Lê Việt Thắng khoai to';
-  currentProgress = 20;
+  _toggleData = true;
+
+  set toggleData(val) {
+    this._toggleData = val;
+  }
+
+  get toggleData() {
+    return this._toggleData;
+  }
+
+  toggleButton = () => {
+    this.toggleData = !this.toggleData;
+  }
 }
