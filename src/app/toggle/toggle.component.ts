@@ -13,4 +13,8 @@ export class ToggleComponent implements OnChanges{
     console.log(changes);
     console.log(changes.toggleData.currentValue);
   }
+
+  toggleButtonNow = () => {
+    this.toggleColor.emit();
+  }
 }

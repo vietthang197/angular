@@ -3,7 +3,8 @@
 <body>
 <!-- Will be black -->
 <div class="bg-white dark:bg-black">
-  <app-toggle-component (toggleColor)="toggleButton()" [toggleData]="toggleData"></app-toggle-component>
+  <app-toggle-component #toggleComponent (toggleColor)="toggleButton()" [toggleData]="toggleData"></app-toggle-component>
+  <button (click)="toggleComponent.toggleButtonNow()">Parent button</button>
 </div>
 </body>
 </html>
