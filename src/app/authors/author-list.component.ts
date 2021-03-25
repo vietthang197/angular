@@ -28,7 +28,8 @@ export class AuthorListComponent {
 
   onDelete = (authorId: number) => {
     authors.splice(authors.findIndex(item => item.id === authorId), 1);
-    console.log(authors.findIndex(item => item.id === authorId))
-    console.log(authors);
+        // console.log(authors.findIndex(item => item.id === authorId))
+        // console.log(authors);
+    alert(authorId);
   }
 }

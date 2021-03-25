@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import {ProgressbarComponent} from './progressbar/progressbar.component';
 import {AuthorDetailComponent} from './authors/author-detail.component';
 import {AuthorListComponent} from './authors/author-list.component';
+import {ToggleComponent} from './toggle/toggle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {AuthorListComponent} from './authors/author-list.component';
     HiComponent,
     ProgressbarComponent,
     AuthorDetailComponent,
-    AuthorListComponent
+    AuthorListComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,
