@@ -1,4 +1,4 @@
 <input type="text" [ngModel]="description" (ngModelChange)="description = $event">
 <p>Your description: {{description}}</p>
 
-<button (click)="toggoleButtonNow()" [style.backgroundColor]="toggleData ? 'RED' : 'BLUE'">Toggle button</button>
+<button (click)="toggleButtonNow()" [style.backgroundColor]="toggleData ? 'RED' : 'BLUE'">Toggle button</button>
