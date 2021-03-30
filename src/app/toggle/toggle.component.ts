@@ -17,4 +17,8 @@ export class ToggleComponent implements OnChanges{
   toggleButtonNow = () => {
     this.toggleColor.emit();
   }
+
+  viewChildLogNow = () => {
+    alert('view child logging')
+  }
 }

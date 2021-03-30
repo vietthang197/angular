@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {ToggleComponent} from './toggle/toggle.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
   title = 'Lê Việt Thắng khoai to';
   dataUnknow: unknown;
+
+  @ViewChild('toggleComponent', {static: true}) toggleComp: ToggleComponent;
 
   _toggleData = true;
 
@@ -19,12 +23,19 @@ export class AppComponent {
     return this._toggleData;
   }
 
+  ngOnInit(): void {
+    console.log('ViewChild static true: ', this.toggleComp)
+  }
+
   toggleButton = () => {
     this.toggleData = !this.toggleData;
     let dogServiceImpl = new DogServiceImpl();
-    console.log(dogServiceImpl.findAll());
-    console.log(dogServiceImpl.findOne());
-  }
+    let myDog: Dog = dogServiceImpl.findOne();
+    console.log('xxx');
+    console.log(myDog);
+    console.log({...myDog})
+    this.toggleComp.viewChildLogNow();
+  };
 
   public testNever(con: boolean): string | never {
     if (con) {
@@ -64,6 +75,10 @@ export class DogServiceImpl implements BaseService<Dog>{
     };
     return dog;
   }
+}
+
+function merge<T1, T2>(o1: T1, o2:T2): T1&T2 {
+  return {...o1, ...o2};
 }
 
 
